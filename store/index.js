@@ -1,6 +1,6 @@
 export const state = () => ({
     isFirstTime: "", // 初回アクセス確認
-    isUseSound: false, //サウンドON/OFF isReadAloud
+    isUseSound: true, //サウンドON/OFF isReadAloud
     isUseMic: "speechSynthesis" in window, // マイクの可否 isUseSpeak
     arrayWordImageList: [], // 単語イラストJSON plugins preLoadにて取得
 });
