@@ -1,0 +1,44 @@
+// assets/scss/_mixins.scss
+// 繰り返し使用するスタイルのセットをミックスインとして定義します。
+
+// メディアクエリのミックスイン
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media (max-width: $breakpoint-mobile) {
+      @content;
+    }
+  }
+}
+
+// boxの中の要素のセンタリング
+$flex-center: (
+  align-items: center,
+  justify-content: center,
+);
+
+@mixin flex($settings) {
+  display: flex;
+  align-items: map-get($settings, align-items);
+  justify-content: map-get($settings, justify-content);
+}
+
+// オレンジしましまの背景
+@mixin bgBorderOrenge($val: null) {
+  background: url(/img/chiiku/commonPlay/bg.png) 0 0 / 100px 100px repeat, $val;
+}
+// オレンジしましまの背景薄め
+@mixin bgBorderOrengeLight($val: null) {
+  background: url(/img/chiiku/commonIndex/bgPoint.png) 0 0 / 100px 100px repeat,
+    $val;
+}
+
+// オレンジ太線枠のbox
+@mixin borderBoxStyle($color: $orengebg-color) {
+  background: #fff;
+  padding: 20px 10%;
+  border-radius: 20px;
+  border: 10px solid $color;
+  @include respond-to(mobile) {
+    padding: 10px 20px;
+  }
+}

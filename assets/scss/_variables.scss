@@ -1,0 +1,27 @@
+// assets/scss/_variables.scss
+// 色やフォントサイズ、ブレークポイントなどの変数を定義します。
+$font-stack: "Helvetica, Arial, sans-serif";
+$orengebg-color: #f0a95d;
+$hamburger-menu-hight: 25px;
+
+// メディアクエリの変数定義
+$breakpoint-mobile: 600px;
+
+:root {
+  --title-level2-fontSize: 27px; /* デフォルト（PC） */
+}
+
+@include respond-to(mobile) {
+  :root {
+    --title-level2-fontSize: 21px; /* SP用 */
+  }
+}
+
+.extendWhiteBtn {
+  color: #6d4908;
+  background: #f6f2ea;
+}
+.extendOrengeBtn {
+  background: #eab147;
+  color: #6d4908;
+}

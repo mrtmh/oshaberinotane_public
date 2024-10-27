@@ -1,0 +1,76 @@
+// assets/scss/_base.scss
+// 全体に適用されるベーススタイル（リセットやグローバルなフォントスタイルなど）を記述します。
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #333;
+}
+html {
+  font-size: 12px;
+  *font-size: small;
+  *font: xx-small;
+}
+ul,
+li,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body:has(.mikishaki) {
+  &::-webkit-scrollbar {
+    width: 30px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #ccc;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #ff9114;
+    border-radius: 15px;
+  }
+}
+
+// .common_setting_whiteBtn {
+//   color: map-get(map-get($theme, whiteBtn), color);
+//   background-color: map-get(map-get($theme, whiteBtn), background);
+// }
+// .common_setting_orenge {
+//   color: map-get(map-get($theme, orengeBtn), color);
+//   background-color: map-get(map-get($theme, orengeBtn), background);
+// }
+
+*:has(.site) {
+  font-size: 12px;
+  font-family: Noto Sans JP, sans-serif;
+  .pink {
+    color: #d773a2;
+  }
+  .yellow {
+    color: #ffd743;
+  }
+  .green {
+    color: #43c065;
+  }
+  .orenge {
+    color: rgb(226, 158, 112);
+  }
+}
+@media ($breakpoint-mobile < width) {
+  .only-pc {
+  }
+  .only-sp {
+    display: none;
+  }
+}
+@media (width <= $breakpoint-mobile) {
+  .only-pc {
+    display: none;
+  }
+  .only-sp {
+  }
+}
